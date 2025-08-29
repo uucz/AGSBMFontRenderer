@@ -2,7 +2,7 @@ clone_depth: 1
 
 install:
   - git clone --depth=1 https://github.com/nothings/stb.git thirdparty/stb
-  - svn co http://svn.code.sf.net/p/utfcpp/code/v2_0/source thirdparty/utf8-cpp
+  - git clone --depth=1 https://github.com/nemtrif/utfcpp.git thirdparty/utf8-cpp
 
 build_script:
   - mkdir build
