@@ -1,11 +1,13 @@
 clone_depth: 1
 
-# 指定构建环境
 image: Visual Studio 2017
 
 install:
   - git clone --depth=1 https://github.com/nothings/stb.git thirdparty/stb
-  - git clone --depth=1 https://github.com/nemtrif/utfcpp.git thirdparty/utf8-cpp
+  - git clone --depth=1 https://github.com/nemtrif/utfcpp.git temp_utf8cpp
+  - mkdir thirdparty\utf8-cpp
+  - copy temp_utf8cpp\source\* thirdparty\utf8-cpp\
+  - rmdir /s /q temp_utf8cpp
 
 build_script:
   - mkdir build
