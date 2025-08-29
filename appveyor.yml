@@ -6,7 +6,7 @@ install:
   - git clone --depth=1 https://github.com/nothings/stb.git thirdparty/stb
   - git clone --depth=1 https://github.com/nemtrif/utfcpp.git temp_utf8cpp
   - mkdir thirdparty\utf8-cpp
-  - copy temp_utf8cpp\source\* thirdparty\utf8-cpp\
+  - xcopy temp_utf8cpp\source thirdparty\utf8-cpp\ /E /I /Q
   - rmdir /s /q temp_utf8cpp
 
 build_script:
