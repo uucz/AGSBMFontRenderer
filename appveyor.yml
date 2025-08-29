@@ -1,5 +1,8 @@
 clone_depth: 1
 
+# 指定构建环境
+image: Visual Studio 2017
+
 install:
   - git clone --depth=1 https://github.com/nothings/stb.git thirdparty/stb
   - git clone --depth=1 https://github.com/nemtrif/utfcpp.git thirdparty/utf8-cpp
@@ -7,7 +10,7 @@ install:
 build_script:
   - mkdir build
   - cd build
-  - cmake .. -G "Visual Studio 9 2008"
+  - cmake .. -G "Visual Studio 15 2017"
   - cmake --build . --config Release
   - dir
   - dir Release
